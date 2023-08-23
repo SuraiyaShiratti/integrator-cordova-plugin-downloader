@@ -1,6 +1,6 @@
 package hr.integrator.cordova.plugins.downloader;
 
-import android.content.Context;
+
 import android.content.pm.LauncherApps;
 import android.database.Cursor;
 import android.net.Uri;
@@ -23,10 +23,9 @@ import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.Manifest;
 
-import java.util.HashMap;
-import java.util.Map;
 
-import android.os.Environment;
+
+import android.os.Build;
 
 public class Downloader extends CordovaPlugin {
 
