@@ -1,6 +1,6 @@
 package hr.integrator.cordova.plugins.downloader;
 
-
+import android.content.Context;
 import android.content.pm.LauncherApps;
 import android.database.Cursor;
 import android.net.Uri;
@@ -17,13 +17,10 @@ import org.json.JSONObject;
 
 import android.app.DownloadManager;
 import android.content.BroadcastReceiver;
-import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.Manifest;
-
-
 
 import android.os.Build;
 
