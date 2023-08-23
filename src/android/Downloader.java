@@ -36,7 +36,7 @@ public class Downloader extends CordovaPlugin {
   DownloadManager downloadManager;
   BroadcastReceiver receiver;
 
-  private CallbackContext downloadReceiverCallbackContext = null;
+  private CallbackContext downloadCallbackContext = null;
   private JSONArray executeArgs;
   long downloadId = 0;
 
@@ -86,7 +86,7 @@ public class Downloader extends CordovaPlugin {
 
     IntentFilter intentFilter = new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE);
 
-    webView.getContext().registerReceiver(downloadReceiver, intentFilter);
+    webView.getContext().registerReceiver(downloadReceiver, intentFilter,Context.RECEIVER_NOT_EXPORTED,null);
 
     this.downloadId = downloadManager.enqueue(request);
 
