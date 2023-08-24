@@ -86,7 +86,7 @@ public class Downloader extends CordovaPlugin {
 
     IntentFilter intentFilter = new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE);
 
-    webView.getContext().registerReceiver(downloadReceiver, intentFilter,"com.fedena.fit.permission.RECEIVER_EXPORTED",null);
+    webView.getContext().registerReceiver(downloadReceiver, intentFilter,webView.getContext().RECEIVER_EXPORTED);
 
     this.downloadId = downloadManager.enqueue(request);
 
